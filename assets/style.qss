@@ -1,0 +1,152 @@
+/* Background Utama Aplikasi */
+QWidget {
+    background-color: #121921;
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+}
+
+/* Header Text */
+QLabel#lbl_title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+QLabel#lbl_subtitle {
+    font-size: 11px;
+    color: #8f9ba8;
+}
+
+/* Checkbox Grid */
+QCheckBox {
+    color: #ffffff;
+    spacing: 6px;
+}
+
+QCheckBox::indicator {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ffffff;
+    background-color: #121921;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #ffffff;
+}
+
+/* Dropdown & Input Text */
+QComboBox, QLineEdit {
+    background-color: #0d1217;
+    border: 1px solid #1f2b38;
+    border-radius: 4px;
+    padding: 5px 8px;
+    color: #a0acba;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+/* Status Bar Cyan Tengah */
+QLabel#status_bar {
+    background-color: #00ffd5;
+    color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 6px;
+}
+
+/* Bitrate & Display Boxes */
+QLabel#lbl_bitrate {
+    background-color: #00ff66;
+    color: #000000;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 4px 12px;
+}
+
+QLabel#lbl_default {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    border: 2px solid #1f2b38;
+    border-radius: 6px;
+    padding: 4px 16px;
+}
+
+/* Dial Putar Bitrate */
+QDial {
+    background-color: #00ffd5;
+}
+
+/* Tombol Ikon Baris Atas (Wifi, Settings, dll) */
+QPushButton.btn-icon-small {
+    background-color: #f6f1f1;
+    border: 1px solid #1f2b38;
+    border-radius: 15px;
+    min-width: 30px;
+    max-width: 30px;
+    min-height: 30px;
+    max-height: 30px;
+}
+
+QPushButton.btn-icon-small:hover {
+    background-color: #7a8188;
+}
+
+/* Tombol Aksi Bawah Warna-Warni */
+QPushButton.btn-danger {
+    background-color: #171616;
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+QPushButton.btn-cyan {
+    background-color: #758db9;
+    color: #000000;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+QPushButton.btn-purple {
+    background-color: #72b9fb;
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+QPushButton.btn-start {
+    background-color: #fc4800;
+    color: #000000;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    opacity: 0.9;
+}
+
+/* Progress Bar Paling Bawah */
+QProgressBar {
+    background-color: #0d1a29;
+    border: 1px solid #12283f;
+    border-radius: 4px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+QProgressBar::chunk {
+    background-color: #0052cc;
+    border-radius: 3px;
+}
