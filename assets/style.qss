@@ -1,152 +1,217 @@
-/* Background Utama Aplikasi */
+/* ==========================================================
+   TEMA: CLEAN MODERN LIGHT (BALANCED & CRISP)
+   ========================================================== */
+
+/* Background Utama & Font Global */
 QWidget {
-    background-color: #121921;
-    color: #ffffff;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
     font-size: 12px;
 }
 
-/* Header Text */
+/* Header Title & Subtitle */
 QLabel#lbl_title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0px;
+    padding: 0px;
 }
 
 QLabel#lbl_subtitle {
     font-size: 11px;
-    color: #8f9ba8;
+    color: #64748b;
+    font-weight: 600;
+    margin-top: -3px;
+    padding: 0px;
 }
 
-/* Checkbox Grid */
+/* Checkbox Grid Clean */
 QCheckBox {
-    color: #ffffff;
-    spacing: 6px;
+    color: #334155;
+    spacing: 8px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 QCheckBox::indicator {
-    width: 14px;
-    height: 14px;
-    border: 1px solid #ffffff;
-    background-color: #121921;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+QCheckBox::indicator:hover {
+    border-color: #4f46e5;
 }
 
 QCheckBox::indicator:checked {
-    background-color: #ffffff;
+    background-color: #4f46e5;
+    border-color: #4f46e5;
 }
 
 /* Dropdown & Input Text */
 QComboBox, QLineEdit {
-    background-color: #0d1217;
-    border: 1px solid #1f2b38;
-    border-radius: 4px;
-    padding: 5px 8px;
-    color: #a0acba;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 7px 12px;
+    color: #0f172a;
+    font-weight: 500;
+}
+
+QComboBox:hover, QLineEdit:hover {
+    border-color: #94a3b8;
+}
+
+QComboBox:focus, QLineEdit:focus {
+    border: 1.5px solid #4f46e5;
+    background-color: #ffffff;
 }
 
 QComboBox::drop-down {
     border: none;
+    padding-right: 10px;
 }
 
-/* Status Bar Cyan Tengah */
+/* Status Bar Soft Indigo Accent */
 QLabel#status_bar {
-    background-color: #00ffd5;
-    color: #000000;
-    font-size: 13px;
-    font-weight: bold;
-    border-radius: 12px;
-    padding: 6px;
-}
-
-/* Bitrate & Display Boxes */
-QLabel#lbl_bitrate {
-    background-color: #00ff66;
-    color: #000000;
-    font-size: 26px;
-    font-weight: bold;
-    border-radius: 6px;
-    padding: 4px 12px;
-}
-
-QLabel#lbl_default {
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 28px;
-    font-weight: bold;
-    border: 2px solid #1f2b38;
-    border-radius: 6px;
-    padding: 4px 16px;
-}
-
-/* Dial Putar Bitrate */
-QDial {
-    background-color: #00ffd5;
-}
-
-/* Tombol Ikon Baris Atas (Wifi, Settings, dll) */
-QPushButton.btn-icon-small {
-    background-color: #f6f1f1;
-    border: 1px solid #1f2b38;
-    border-radius: 15px;
-    min-width: 30px;
-    max-width: 30px;
-    min-height: 30px;
-    max-height: 30px;
-}
-
-QPushButton.btn-icon-small:hover {
-    background-color: #7a8188;
-}
-
-/* Tombol Aksi Bawah Warna-Warni */
-QPushButton.btn-danger {
-    background-color: #171616;
-    color: #ffffff;
+    background-color: #e0e7ff;
+    color: #3730a3;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid #c7d2fe;
     border-radius: 8px;
-    font-weight: bold;
     padding: 8px;
+    letter-spacing: 0.5px;
 }
 
-QPushButton.btn-cyan {
-    background-color: #758db9;
-    color: #000000;
+/* Bitrate Display Button */
+QPushButton#lbl_bitrate {
+    background-color: #ffffff;
+    color: #4f46e5;
+    font-size: 15px;
+    font-weight: 700;
+    border: 1.5px solid #4f46e5;
     border-radius: 8px;
-    font-weight: bold;
-    padding: 8px;
-}
-
-QPushButton.btn-purple {
-    background-color: #72b9fb;
-    color: #ffffff;
-    border-radius: 8px;
-    font-weight: bold;
-    padding: 8px;
-}
-
-QPushButton.btn-start {
-    background-color: #fc4800;
-    color: #000000;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: bold;
     padding: 8px 16px;
 }
 
-QPushButton:hover {
-    opacity: 0.9;
+QPushButton#lbl_bitrate:hover {
+    background-color: #4f46e5;
+    color: #ffffff;
 }
 
-/* Progress Bar Paling Bawah */
-QProgressBar {
-    background-color: #0d1a29;
-    border: 1px solid #12283f;
-    border-radius: 4px;
-    text-align: center;
+/* Default Reset Button */
+QPushButton#lbl_default {
+    background-color: #ffffff;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton#lbl_default:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+/* Dial Control */
+QDial {
+    background-color: #f1f5f9;
+}
+
+/* Tombol Ikon Baris Atas (Wifi, Setting, dsb) */
+QPushButton.btn-icon-small {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    min-width: 34px;
+    max-width: 34px;
+    min-height: 34px;
+    max-height: 34px;
+}
+
+QPushButton.btn-icon-small:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+/* Action Buttons Bar Bawah (Konsisten Menggunakan Palette Indigo & Slate) */
+QPushButton.btn-danger {
+    background-color: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 9px;
+}
+
+QPushButton.btn-danger:hover {
+    background-color: #3a0f0f;
     color: #ffffff;
-    font-weight: bold;
+}
+
+QPushButton.btn-cyan {
+    background-color: #ffffff;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 9px;
+}
+
+QPushButton.btn-cyan:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+QPushButton.btn-purple {
+    background-color: #f1f5f9;
+    color: #4f46e5;
+    border: 1px solid #c7d2fe;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 9px;
+}
+
+QPushButton.btn-purple:hover {
+    background-color: #e0e7ff;
+}
+
+/* Tombol Utama (START SCRCPY) - Vibrant Indigo */
+QPushButton.btn-start {
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 9px 18px;
+}
+
+QPushButton.btn-start:hover {
+    background-color: #4338ca;
+}
+
+QPushButton.btn-start:pressed {
+    background-color: #3730a3;
+}
+
+/* Progress Bar Minimalis Clean */
+QProgressBar {
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 6px;
+    max-height: 6px;
+    color: transparent;
 }
 
 QProgressBar::chunk {
-    background-color: #0052cc;
-    border-radius: 3px;
+    background-color: #4f46e5;
+    border-radius: 5px;
 }
