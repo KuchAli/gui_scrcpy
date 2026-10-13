@@ -1,4 +1,9 @@
 env/
-__pycache__/
+
+pycache/
+*/pycache/
+*/**/pycache/
+*.py[cod]
+*$py.class
 
 logs/
