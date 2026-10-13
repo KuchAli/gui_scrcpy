@@ -76,30 +76,39 @@ class ScrpycpyApp(QWidget):
 
         #checkbox options grid
         grid_layout = QGridLayout()
-        self.chk_bottom_panel = QCheckBox("Bottom Panel")
-        self.chk_side_panel = QCheckBox("Side Panel")
-        self.chk_swipe_panel = QCheckBox("Swipe Panel")
+        # self.chk_bottom_panel = QCheckBox("Bottom Panel")
+        # self.chk_side_panel = QCheckBox("Side Panel")
+        # self.chk_swipe_panel = QCheckBox("Swipe Panel")
 
         self.chk_fullscreen = QCheckBox("Fullscreen")
+        self.chk_fullscreen.toggled.connect(self.toggle_fs)
         #self.chk_fullscreen.setIcon(AppUtils.load_icon("fullscreen"))
 
         self.chk_keep_off = QCheckBox("Keep display off")
+        self.chk_keep_off.toggled.connect(self.toggle_do)
+
         self.chk_show_touches = QCheckBox("Show touches")
+        self.chk_show_touches.toggled.connect(self.toggle_st)
+
         self.chk_record = QCheckBox("Record screen")
-        self.chk_always_top = QCheckBox("Always on Top")
+        self.chk_record.toggled.connect(self.toggle_r)
+
+        # self.chk_always_top = QCheckBox("Always on Top")
+
         self.chk_lock_rot = QCheckBox("Lock Rotation")
+        self.chk_lock_rot.toggled.connect(self.toggle_lr)
 
-        self.chk_bottom_panel.setChecked(True)
-        self.chk_side_panel.setChecked(True)
-        self.chk_swipe_panel.setChecked(True)
+        # self.chk_bottom_panel.setChecked(True)
+        # self.chk_side_panel.setChecked(True)
+        # self.chk_swipe_panel.setChecked(True)
 
-        grid_layout.addWidget(self.chk_bottom_panel, 0, 0)
+        # grid_layout.addWidget(self.chk_bottom_panel, 0, 0)
         grid_layout.addWidget(self.chk_fullscreen, 0, 1)
         grid_layout.addWidget(self.chk_record, 0, 2)
-        grid_layout.addWidget(self.chk_side_panel, 1, 0)
+        # grid_layout.addWidget(self.chk_side_panel, 1, 0)
         grid_layout.addWidget(self.chk_keep_off, 1, 1)
-        grid_layout.addWidget(self.chk_always_top, 1, 2)
-        grid_layout.addWidget(self.chk_swipe_panel, 2, 0)
+        # grid_layout.addWidget(self.chk_always_top, 1, 2)
+        # grid_layout.addWidget(self.chk_swipe_panel, 2, 0)
         grid_layout.addWidget(self.chk_show_touches, 2, 1)
         grid_layout.addWidget(self.chk_lock_rot, 2, 2)
 
@@ -248,6 +257,32 @@ class ScrpycpyApp(QWidget):
         #signal
         self.dial_bitrate.valueChanged.connect(self.update_bitrate_from_dial)
         self.process.finished.connect(self.on_finished)
+
+    def toggle_lr(self, checked):
+        if checked:
+            self.lbl_status.setText("LOCKSCREEN MODE : ON")
+        else:
+            self.lbl_status.setText("LOCKSCREEN MODE : OFF")
+    def toggle_st(self, checked):
+        if checked:
+            self.lbl_status.setText("SHOW TOUCH : ON")
+        else:
+            self.lbl_status.setText("SHOW TOUCH : OFF")
+    def toggle_do(self, checked):
+        if checked:
+            self.lbl_status.setText("DISPLAY : OFF")
+        else:
+            self.lbl_status.setText("DISPLAY : ON")
+    def toggle_r(self, checked):
+        if checked:
+            self.lbl_status.setText("RECORD : ON")
+        else:
+            self.lbl_status.setText("RECORD : ON")
+    def toggle_fs(self, checked):
+        if checked :
+            self.lbl_status.setText("FULLSCREEN MODE: ON")
+        else:
+            self.lbl_status.setText("FULLSCREEN MODE: OFF")
 
     def load_stylesheet(self):
         # path stylesheet langsung mengarah ke assets/style.qss di luar src
@@ -399,12 +434,14 @@ class ScrpycpyApp(QWidget):
             args = []
             if self.chk_fullscreen.isChecked():
                 args.append("-f")
+            if self.chk_record.isChecked():
+                args.append("-r")
             if self.chk_keep_off.isChecked():
                 args.append("-S")
             if self.chk_show_touches.isChecked():
                 args.append("-t")
-            if self.chk_always_top.isChecked():
-                args.append("--always-on-top")
+            # if self.chk_always_top.isChecked():
+            #     args.append("--always-on-top")
 
             args.extend(["-b", f"{self.bitrate_kbps}K"])
 
