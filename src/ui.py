@@ -110,18 +110,18 @@ class ScrpycpyApp(QWidget):
         # grid_layout.addWidget(self.chk_always_top, 1, 2)
         # grid_layout.addWidget(self.chk_swipe_panel, 2, 0)
         grid_layout.addWidget(self.chk_show_touches, 2, 1)
-        grid_layout.addWidget(self.chk_lock_rot, 2, 2)
+        grid_layout.addWidget(self.chk_lock_rot, 1, 2)
 
         main_layout.addLayout(grid_layout)
 
         #quick icon bar
         icon_bar_layout = QHBoxLayout()
 
-        btn_wifi = QPushButton()
-        btn_wifi.setIcon(AppUtils.load_icon("wifi"))
-        btn_wifi.setProperty("class", "btn-icon-small")
-        btn_wifi.setToolTip("Koneksi Wireless Debugging (Wi-Fi)")
-        btn_wifi.clicked.connect(self.connect_wifi)
+        # btn_wifi = QPushButton()
+        # btn_wifi.setIcon(AppUtils.load_icon("wifi"))
+        # btn_wifi.setProperty("class", "btn-icon-small")
+        # btn_wifi.setToolTip("Koneksi Wireless Debugging (Wi-Fi)")
+        # btn_wifi.clicked.connect(self.connect_wifi)
 
         btn_settings = QPushButton()
         btn_settings.setIcon(AppUtils.load_icon("setting"))
@@ -146,7 +146,7 @@ class ScrpycpyApp(QWidget):
             ["Default Rotation", "0 Degree", "90 Degree", "180 Degree"]
         )
 
-        icon_bar_layout.addWidget(btn_wifi)
+        # icon_bar_layout.addWidget(btn_wifi)
         icon_bar_layout.addWidget(btn_settings)
         icon_bar_layout.addWidget(btn_restart)
         icon_bar_layout.addWidget(btn_android)
@@ -277,7 +277,7 @@ class ScrpycpyApp(QWidget):
         if checked:
             self.lbl_status.setText("RECORD : ON")
         else:
-            self.lbl_status.setText("RECORD : ON")
+            self.lbl_status.setText("RECORD : OFF")
     def toggle_fs(self, checked):
         if checked :
             self.lbl_status.setText("FULLSCREEN MODE: ON")
@@ -322,14 +322,14 @@ class ScrpycpyApp(QWidget):
 
     def reset_all_inputs(self):
         self.reset_to_default()
-        self.chk_bottom_panel.setChecked(True)
-        self.chk_side_panel.setChecked(True)
-        self.chk_swipe_panel.setChecked(True)
+        # self.chk_bottom_panel.setChecked(True)
+        # self.chk_side_panel.setChecked(True)
+        # self.chk_swipe_panel.setChecked(True)
         self.chk_fullscreen.setChecked(False)
         self.chk_keep_off.setChecked(False)
         self.chk_show_touches.setChecked(False)
         self.chk_record.setChecked(False)
-        self.chk_always_top.setChecked(False)
+        # self.chk_always_top.setChecked(False)
         self.chk_lock_rot.setChecked(False)
         self.txt_flags.clear()
 
