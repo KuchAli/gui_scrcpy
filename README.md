@@ -50,7 +50,7 @@ certutil -hashfile GUIScrcpy_Setup_1.0.exe SHA256
 2. Klik ikon Android untuk mengecek perangkat terdeteksi.
 3. Pilih opsi yang diinginkan, lalu klik **START SCRCPY**.
 
-## Contoh Penggunaan Pengaturan
+## Penggunaan Pengaturan Pada GUIScrcpy
 
 ### Contoh mengisi kolom settingsnya
  
