@@ -1,9 +1,7 @@
 env/
 
-pycache/
-*/pycache/
-*/**/pycache/
-*.py[cod]
-*$py.class
-
-logs/
+build/
+dist/
+Output/
+__pycache__/
+*.pyc
