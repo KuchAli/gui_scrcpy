@@ -1,10 +1,10 @@
 # GUI SCRCPY
 
-Antarmuka grafis (GUI) sederhana untuk [scrcpy](https://github.com/Genymobile/scrcpy), dibuat dengan Python dan PyQt6. Tampilkan dan kontrol layar HP Android dari PC Windows tanpa perlu mengetik perintah di terminal.
+Antarmuka grafis (GUI) sederhana untuk [scrcpy](https://github.com/Genymobile/scrcpy), kontrol layar HP Android dari PC Windows tanpa perlu mengetik perintah di terminal.
 
 > Build 1.0 oleh Mister K
 
-<img src="assets/icons/logos.png" alt="Icon GUISCRCPY"  width="700" >
+<img src="assets/icons/logos.png" alt="Icon GUISCRCPY"  width="450" >
 
 <!-- Tambahkan screenshot aplikasi di sini, contoh:
 ![Screenshot](assets/screenshot.png)
@@ -49,6 +49,30 @@ certutil -hashfile GUIScrcpy_Setup_1.0.exe SHA256
 1. Colok HP ke PC dan izinkan USB debugging di layar HP.
 2. Klik ikon Android untuk mengecek perangkat terdeteksi.
 3. Pilih opsi yang diinginkan, lalu klik **START SCRCPY**.
+
+## Penggunaan Pengaturan Pada GUIScrcpy
+
+### Contoh mengisi kolom settingsnya
+ 
+Kolom **Enter additional flags** menerima argumen scrcpy apa saja, dipisahkan spasi. Beberapa contoh yang sering dipakai:
+ 
+```
+--max-size 1280
+--max-fps 30
+--no-audio
+--stay-awake
+--always-on-top
+--window-borderless
+--window-title "HP Android"
+```
+ 
+Bisa digabung sekaligus:
+ 
+```
+--max-size 1024 --max-fps 30 --stay-awake --always-on-top
+```
+ 
+Catatan: nilai yang mengandung spasi, seperti judul jendela, tidak selalu terbaca benar karena flags dipisahkan berdasarkan spasi. Pakai judul satu kata, misalnya `--window-title=Demo`.
 
 <!-- ### Lewat Wi-Fi (Wireless Debugging)
 
@@ -116,8 +140,8 @@ Hasil build ada di `dist\GUIScrcpy\`. Untuk membuat installer, buka `installer.i
 ## Kredit dan Lisensi
 
 - [scrcpy](https://github.com/Genymobile/scrcpy) oleh Genymobile, dilisensikan di bawah Apache License 2.0. Binary-nya disertakan beserta lisensinya.
-- [GUIScrcpy](https://github.com/KuchAli/gui_scrcpy) oleh Mister K, Oktober 2026.
+- [GUIScrcpy](https://github.com/KuchAli/gui_scrcpy) oleh Mister K, dilisensikan di bawah MIT. Oktober 2026.
 <!-- - [PyQt6](https://www.riverbankcomputing.com/software/pyqt/) untuk antarmuka.
 - [python-qrcode](https://github.com/lincolnloop/python-qrcode) untuk pembuatan QR pairing. -->
 
-Lisensi proyek ini: _isi sesuai pilihanmu (misalnya MIT), lalu tambahkan file `LICENSE`._
+Lisensi proyek ini: MIT LICENSE - Mister K 2026
