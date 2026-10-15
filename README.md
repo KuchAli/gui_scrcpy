@@ -1,6 +1,6 @@
 # GUI SCRCPY
 
-Antarmuka grafis (GUI) sederhana untuk [scrcpy](https://github.com/Genymobile/scrcpy), dibuat dengan Python dan PyQt6. Tampilkan dan kontrol layar HP Android dari PC Windows tanpa perlu mengetik perintah di terminal.
+Antarmuka grafis (GUI) sederhana untuk [scrcpy](https://github.com/Genymobile/scrcpy), kontrol layar HP Android dari PC Windows tanpa perlu mengetik perintah di terminal.
 
 > Build 1.0 oleh Mister K
 
@@ -49,6 +49,30 @@ certutil -hashfile GUIScrcpy_Setup_1.0.exe SHA256
 1. Colok HP ke PC dan izinkan USB debugging di layar HP.
 2. Klik ikon Android untuk mengecek perangkat terdeteksi.
 3. Pilih opsi yang diinginkan, lalu klik **START SCRCPY**.
+
+## Contoh Penggunaan Pengaturan
+
+### Contoh mengisi kolom settingsnya
+ 
+Kolom **Enter additional flags** menerima argumen scrcpy apa saja, dipisahkan spasi. Beberapa contoh yang sering dipakai:
+ 
+```
+--max-size 1280
+--max-fps 30
+--no-audio
+--stay-awake
+--always-on-top
+--window-borderless
+--window-title "HP Android"
+```
+ 
+Bisa digabung sekaligus:
+ 
+```
+--max-size 1024 --max-fps 30 --stay-awake --always-on-top
+```
+ 
+Catatan: nilai yang mengandung spasi, seperti judul jendela, tidak selalu terbaca benar karena flags dipisahkan berdasarkan spasi. Pakai judul satu kata, misalnya `--window-title=Demo`.
 
 <!-- ### Lewat Wi-Fi (Wireless Debugging)
 
