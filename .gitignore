@@ -3,5 +3,6 @@ env/
 build/
 dist/
 Output/
+scrcpy/
 __pycache__/
 *.pyc
