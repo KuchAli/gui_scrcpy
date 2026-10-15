@@ -4,7 +4,7 @@ Antarmuka grafis (GUI) sederhana untuk [scrcpy](https://github.com/Genymobile/sc
 
 > Build 1.0 oleh Mister K
 
-<img src="assets/icons/logos.png" alt="Icon GUISCRCPY"  width="700" >
+<img src="assets/icons/logos.png" alt="Icon GUISCRCPY"  width="450" >
 
 <!-- Tambahkan screenshot aplikasi di sini, contoh:
 ![Screenshot](assets/screenshot.png)
@@ -116,8 +116,8 @@ Hasil build ada di `dist\GUIScrcpy\`. Untuk membuat installer, buka `installer.i
 ## Kredit dan Lisensi
 
 - [scrcpy](https://github.com/Genymobile/scrcpy) oleh Genymobile, dilisensikan di bawah Apache License 2.0. Binary-nya disertakan beserta lisensinya.
-- [GUIScrcpy](https://github.com/KuchAli/gui_scrcpy) oleh Mister K, Oktober 2026.
+- [GUIScrcpy](https://github.com/KuchAli/gui_scrcpy) oleh Mister K, dilisensikan di bawah MIT. Oktober 2026.
 <!-- - [PyQt6](https://www.riverbankcomputing.com/software/pyqt/) untuk antarmuka.
 - [python-qrcode](https://github.com/lincolnloop/python-qrcode) untuk pembuatan QR pairing. -->
 
-Lisensi proyek ini: _isi sesuai pilihanmu (misalnya MIT), lalu tambahkan file `LICENSE`._
+Lisensi proyek ini: MIT LICENSE - Mister K 2026
