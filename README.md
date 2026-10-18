@@ -4,7 +4,7 @@ Antarmuka grafis (GUI) sederhana untuk [scrcpy](https://github.com/Genymobile/sc
 
 > Build 1.0 oleh Mister K
 
-<img src="assets/icons/logos.png" alt="Icon GUISCRCPY"  width="450" >
+<img src="assets/scrcpygui.jpeg" alt="Icon GUISCRCPY"  width="450" >
 
 <!-- Tambahkan screenshot aplikasi di sini, contoh:
 ![Screenshot](assets/screenshot.png)
